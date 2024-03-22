@@ -1,0 +1,53 @@
+---
+import NoNav from "../layouts/NoNav.astro";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "../components/ui/breadcrumbs";
+import AccordionSec from '../components/react/AccordionSec'
+---
+
+<NoNav title="Preguntas">
+  <section
+    class="w-full sm:pt-[4.5rem] sm:px-[7rem] px-[1rem] py-[2.5rem] h-[100vh] flex flex-col"
+  >
+    <Breadcrumb>
+      <BreadcrumbList>
+        <BreadcrumbItem>
+          <BreadcrumbLink
+            href="/"
+            className="text-[#00000080] hover:text-[#000000]"
+            >Inicio</BreadcrumbLink
+          >
+        </BreadcrumbItem>
+        <BreadcrumbSeparator className="text-[#00000080]" />
+        <BreadcrumbItem>
+          <BreadcrumbLink className="text-[#000000]">Preguntas</BreadcrumbLink>
+        </BreadcrumbItem>
+      </BreadcrumbList>
+    </Breadcrumb>
+    <h2
+      class="text-3xl font-normal tracking-tighter sm:text-5xl text-[#9DB2AF] font-yellowtail sm:mt-[1rem] mt-[3rem] title"
+    >
+      Algunas preguntas
+    </h2>
+    <p
+      class="sm:mt-[1rem] mt-[1rem] max-w-[700px] text-[#00000070] sm:text-xl/relaxed"
+    >
+      Estamos aqui para ayudarte. Si tienes otras preguntas, puede hablar con
+      soporte o contactarnos.
+    </p>
+
+    <AccordionSec client:visible/>
+
+    <a
+      href="https://docs.google.com/forms/d/1qMDFyYDKaSxsBVJHPiI1Q9fVkqzDFdv2OsgbCdHIXxM/edit"
+      class="text-black underline decoration-black mt-[3rem] self-center sm:text-[16px] text-[13px]"
+      >Tienes alguna pregunta? Deja tu mensaje o feedback</a
+    >
+  </section>
+</NoNav>

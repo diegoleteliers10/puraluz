@@ -1,0 +1,41 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/react/Hero";
+import About from "../components/react/About";
+import Between from "../components/react/Between";
+// import Servicios from "../components/Servicios.astro";
+import Servicios from "../components/react/Servicios"
+import Contact from "../components/react/Contact";
+import { lang } from "../../utils/index";
+// import ModalCard from "../components/react/Servicios"
+---
+
+<Layout title="Puraluz">
+  <main>
+    <Hero
+      firstP={lang.hero.es.fpar}
+      secondPar={lang.hero.es.spar}
+      description={lang.hero.es.par}
+      button={lang.hero.es.butt}
+    />
+    <About
+      title={lang.about.es.title}
+      description={lang.about.es.description}
+      client:load
+    />
+    <Between frase={lang.between.es.frase} />
+    <Servicios client:visible/>
+    <Contact
+      title={lang.contact.es.title}
+      subtitle={lang.contact.es.subtitle}
+      contactName={lang.contact.es.contactName}
+      inputName={lang.contact.es.inputName}
+      contactEmail={lang.contact.es.contactEmail}
+      inputEmail={lang.contact.es.inputEmail}
+      contactMessage={lang.contact.es.contactMessage}
+      inputMessage={lang.contact.es.inputMessage}
+      whatsapp={lang.contact.es.whatsapp}
+      client:load
+    />
+  </main>
+</Layout>

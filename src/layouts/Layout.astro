@@ -1,0 +1,92 @@
+---
+import Nav from "../components/react/Nav";
+import Footer from "../components/Footer.astro";
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="apple-touch-icon" sizes="57x57" href="/logoDani/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/logoDani/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/logoDani/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/logoDani/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/logoDani/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/logoDani/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/logoDani/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/logoDani/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/logoDani/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/logoDani/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logoDani/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/logoDani/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/logoDani/favicon-16x16.png">
+    <link rel="manifest" href="/logoDani/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/logoDani/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <Nav />
+  <body>
+    <slot />
+  </body>
+  <Footer />
+
+  <style is:global>
+    html {
+      background: #fffdfa;
+      color: #fffdfa;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .loader {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: inline-block;
+      box-sizing: border-box;
+      animation: animloader 1s linear infinite;
+    }
+
+    @keyframes animloader {
+      0% {
+        box-shadow: -72px 0 #fff inset;
+      }
+
+      100% {
+        box-shadow: 48px 0 #fff inset;
+      }
+    }
+    .title {
+      font-family: "DM Serif Display", serif;
+    }
+    .frase {
+      font-family: "Alex Brush", cursive;
+    }
+  </style>
+</html>
