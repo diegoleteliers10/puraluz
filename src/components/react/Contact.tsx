@@ -67,28 +67,28 @@ const Contact = ({title,subtitle,contactName,inputName,contactEmail,inputEmail,c
     )
   }
   return (
-    <section className="h-[100dvh] w-full py-4 bg-[#9DB2AF] mt-3" id="contact">
+    <section className="lg:h-[100dvh] xl:h-[100dvh] h-auto w-full lg:py-4 xl:py-0 bg-[#9DB2AF] py-4 mt-3 md:px-4" id="contact">
       <Toaster position='top-center'/>
-      <motion.div className="sm:px-[2rem] flex flex-col items-center" initial={{ opacity: 0, y: -200 }} whileInView={{opacity:1,y:0}} transition={{ delay: 2, duration: 0.7 }} viewport={{ once: true }}>
-        <h2 className="text-[#fffdfa] font-titleFont text-[3rem] xl:text-[3.25rem] title">{title}</h2>
-        <h3 className="text-[#fffdfa90] sm:text-[14px] xl:text-[18px] text-[12px] text-center mt-2 px-[5rem] max-w-auto font-subFont font-semibold">{subtitle}</h3>
-        <div className="sm:flex-row flex-col flex justify-around w-[80%] mt-6 gap-[3rem]">
+      <motion.div className="sm:px-[2rem] flex flex-col md:flex-col items-center text-[#000000]" initial={{ opacity: 0, y: -200 }} whileInView={{opacity:1,y:0}} transition={{ delay: 2, duration: 0.7 }} viewport={{ once: true }}>
+        <h2 className="text-[#fffdfa] font-titleFont text-[3rem] 1.5xl:text-[4rem] title">{title}</h2>
+        <h3 className="text-[#fffdfa90] sm:text-[14px] 1.5xl:text-[20px] text-[12px] text-center mt-2 px-[5rem] max-w-auto font-subFont font-semibold">{subtitle}</h3>
+        <div className="lg:flex-row flex-col flex justify-around w-[80%] 1.5xl:w-[90%] mt-6 gap-[3rem]">
           <form onSubmit={sendEmail} className="flex flex-col rounded-[15px] w-[100%]">
             <label className="text-[#fffdfa] font-semibold flex flex-col">
               {contactName}
-              <input type="text" placeholder={inputName} name="user_name" value={formData.name} className="rounded-[5px] py-1 pl-2 focus:outline-none border-[1px] border-[#fffdfa] w-[100%] text-sm" id="nameInput" onChange={(e)=>{
+              <input type="text" placeholder={inputName} name="user_name" value={formData.name} className=" text-[#000000] rounded-[5px] py-1 pl-2 focus:outline-none border-[1px] border-[#fffdfa] w-[100%] text-sm" id="nameInput" onChange={(e)=>{
                 setFormData({...formData, name:e.target.value})
               }}/>
             </label>
             <label className="text-[#fffdfa] font-semibold mt-1 flex flex-col">
               {contactEmail}
-              <input type="email" placeholder={inputEmail} className="rounded-[5px] py-1 pl-2 focus:outline-none border-[1px] border-[#fffdfa] w-[100%] text-sm" value={formData.email} id="emailInput" name="user_email" onChange={(e)=>{
+              <input type="email" placeholder={inputEmail} className="text-[#000000] rounded-[5px] py-1 pl-2 focus:outline-none border-[1px] border-[#fffdfa] w-[100%] text-sm" value={formData.email} id="emailInput" name="user_email" onChange={(e)=>{
                 setFormData({...formData, email:e.target.value})
               }}/>
             </label>
             <label className="text-[#fffdfa] font-semibold mt-1 flex flex-col h-full">
               {contactMessage}
-              <textarea placeholder={inputMessage} value={formData.message} className="text-sm rounded-[5px] text-[#000000] py-1 pl-2 h-full w-[100%] resize-none focus:outline-none border-[1px] border-[#fffdfa]" id="messageInput" name="message" onChange={(e)=>{
+              <textarea placeholder={inputMessage} value={formData.message} className="text-sm rounded-[5px] text-[#000000] py-1 pl-2 w-[100%] resize-none focus:outline-none border-[1px] border-[#fffdfa] md:h-full h-[200px]" id="messageInput" name="message" onChange={(e)=>{
                 setFormData({...formData, message:e.target.value})
               }}/>
             </label>
@@ -105,7 +105,7 @@ const Contact = ({title,subtitle,contactName,inputName,contactEmail,inputEmail,c
               {whatsapp}
             </a>
           </form>
-          <img src="/daniyogacontacto.jpg" alt="contact" width={300} height={50} className="object-cover w-[440px] sm:h-[390px] rounded-[5px]"/>
+          <img src="/daniyogacontacto.jpg" alt="contact" width={300} height={50} className="object-cover w-[440px] rounded-[5px] sm:w-full lg:h-[400px] 1.5xl:h-[600px] 1.5xl:w-[550px]"/>
         </div> 
       </motion.div>
     </section>

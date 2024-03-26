@@ -13,7 +13,7 @@ export default function Servicios() {
   return (
     <ModalContext.Provider value={{ selectedService, setSelectedService, isModalOpen, setIsModalOpen }}>
       <section
-        className="w-[100%] sm:h-[100dvh] sm:px-3 h-auto bg-cover bg-no-repeat xl:py-[2.5rem] flex gap-3"
+        className="w-[100%] h-[50dvh] md:h-[100dvh] px-3 bg-cover bg-no-repeat xl:py-[1rem] md:py-3 flex gap-3"
         id="services"
       >
         <div className="flex flex-col w-full gap-3">
@@ -28,7 +28,7 @@ export default function Servicios() {
             </div>
             <div className="absolute inset-0 flex justify-center items-center">
               <h2
-                className="text-black font-titleFont font-semibold text-[1.5rem] title group-hover:scale-[1.5] duration-200"
+                className="text-black font-titleFont font-semibold text-[1.5rem] title group-hover:scale-[1.5] duration-200 text-center"
               >
                 Nutricion Holistica
               </h2>

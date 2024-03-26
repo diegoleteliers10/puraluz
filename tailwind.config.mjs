@@ -25,6 +25,9 @@ export default {
       backgroundPosition: {
         'top-30': 'center 40%', // Personaliza según tus necesidades
       },
+      screens: {
+        '1.5xl': '1440px'
+      }
     },
 	},
   darkMode: "class",
