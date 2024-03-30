@@ -31,9 +31,6 @@ export default function ModalCard() {
   const {selectedService, setSelectedService, isModalOpen, setIsModalOpen} = useContext(ModalContext);
 
 
-  console.log(selectedService,setSelectedService, isModalOpen, setIsModalOpen);
-
-
   return (
     <Dialog open={isModalOpen} onClose={() => setIsModalOpen(false)} className="relative z-50">
     <div className="fixed inset-0 bg-black/30" aria-hidden="true" />

@@ -1,0 +1,45 @@
+---
+import NoNav from "../layouts/NoNav.astro";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "../components/ui/breadcrumbs";
+---
+
+<NoNav title="Preguntas">
+  <section
+    class="w-full sm:pt-[4.5rem] sm:px-[7rem] px-[1rem] py-[2.5rem] h-[100vh] flex flex-col"
+  >
+    <Breadcrumb>
+      <BreadcrumbList>
+        <BreadcrumbItem>
+          <BreadcrumbLink
+            href="/"
+            className="text-[#00000080] hover:text-[#000000]"
+            >Inicio</BreadcrumbLink
+          >
+        </BreadcrumbItem>
+        <BreadcrumbSeparator className="text-[#00000080]" />
+        <BreadcrumbItem>
+          <BreadcrumbLink className="text-[#000000]">Beneficios</BreadcrumbLink>
+        </BreadcrumbItem>
+      </BreadcrumbList>
+    </Breadcrumb>
+    <h2
+      class="text-3xl font-normal tracking-tighter sm:text-5xl text-[#9DB2AF] font-yellowtail sm:mt-[1rem] mt-[3rem] title"
+    >
+      Beneficios
+    </h2>
+    <p
+      class="sm:mt-[1rem] mt-[1rem] max-w-[700px] text-[#00000070] sm:text-xl/relaxed"
+    >
+      Lograste entrar a nuestra seccion de beneficios... Aun no hay beneficios,
+      estamos trabajando para brindarles codigos de descuento asociados a
+      nuestra marca. Esten atentos!
+    </p>
+  </section>
+</NoNav>
