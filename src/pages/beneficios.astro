@@ -1,5 +1,7 @@
 ---
 import NoNav from "../layouts/NoNav.astro";
+import CardBenefit from "../components/common/CardBenefit.astro";
+import { benefits } from "../../utils";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -37,9 +39,22 @@ import {
     <p
       class="sm:mt-[1rem] mt-[1rem] max-w-[700px] text-[#00000070] sm:text-xl/relaxed"
     >
-      Lograste entrar a nuestra seccion de beneficios... Aun no hay beneficios,
-      estamos trabajando para brindarles codigos de descuento asociados a
-      nuestra marca. Esten atentos!
+      Hola, bienvenido a nuestra seccion de beneficios. Aqui podras ver todos
+      los beneficios y descuentos que tenemos asociados a nuestra marca. Espero
+      que los disfrutes!
     </p>
+    <div class="w-full mt-4">
+      {
+        benefits.map((ben) => (
+          <CardBenefit
+            image={ben.image}
+            brandName={ben.brandName}
+            discountCode = {ben.discountCode}
+            brandPageLink = {ben.brandPageLink}
+            class='rounded-lg'
+          />
+        ))
+      }
+    </div>
   </section>
 </NoNav>

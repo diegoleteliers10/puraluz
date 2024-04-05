@@ -1,0 +1,25 @@
+---
+const { image, brandName, discountCode, brandPageLink } = Astro.props;
+import { Image } from "astro:assets";
+---
+
+<div class="relative rounded-md w-[400px] h-[250px]">
+  <Image
+    src={image}
+    alt={brandName}
+    width={24}
+    height={24}
+    class="object-cover w-full h-full"
+  />
+  <section
+    class="absolute bottom-[0rem] flex flex-col justify-center bg-[#00000070] w-full py-[8px] px-[10px] text-[white] backdrop-blur-sm"
+  >
+    <a
+      href={brandPageLink}
+      target="_blank"
+      rel="noreferrer"
+      class="text-3xl title">{brandName}</a
+    >
+    <span class="text-md">codigo: {discountCode}</span>
+  </section>
+</div>
