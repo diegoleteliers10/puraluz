@@ -1,6 +1,5 @@
 ---
 import NoNav from "../layouts/NoNav.astro";
-import CardBenefit from "../components/common/CardBenefit.astro";
 import { benefits } from "../../utils";
 import {
   Breadcrumb,
@@ -10,6 +9,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "../components/ui/breadcrumbs";
+import CardBenefit from "../components/common/CardBenefit";
 ---
 
 <NoNav title="Preguntas">
@@ -43,15 +43,15 @@ import {
       los beneficios y descuentos que tenemos asociados a nuestra marca. Espero
       que los disfrutes!
     </p>
-    <div class="w-full mt-4">
+    <div class="w-full mt-4 grid grid-cols-2">
       {
         benefits.map((ben) => (
           <CardBenefit
             image={ben.image}
             brandName={ben.brandName}
-            discountCode = {ben.discountCode}
-            brandPageLink = {ben.brandPageLink}
-            class='rounded-lg'
+            discountCode={ben.discountCode}
+            brandPageLink={ben.brandPageLink}
+            client:load
           />
         ))
       }
