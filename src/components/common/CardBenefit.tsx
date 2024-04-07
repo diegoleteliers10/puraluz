@@ -6,7 +6,7 @@ const CardBenefit = ({image, brandName, discountCode, brandPageLink}:{image:stri
 
   const handleClipboard = () => {
     const code = document.querySelector('#code_text')
-    if (code) {
+    if (code && code.textContent) {
       navigator.clipboard.writeText(code.textContent)
         .then(() => {
           toast.success('Copied to clipboard')
