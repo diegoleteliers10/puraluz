@@ -1,4 +1,5 @@
 import type { langProps } from './types';
+
 export const navigations = [
   {
     name: {es:'Inicio',en:'Home'},
@@ -96,3 +97,12 @@ export const verifyObj = (obj:ObjInputs)=>{
   if (obj.name === '' && obj.email === '' && obj.message === '') return true
   return false
 }
+
+export const benefits  = [
+  {
+    image:'/BenefitImages/MaliBeneficio.png',
+    brandName:'Mali', 
+    discountCode:'Puraluz_mali', 
+    brandPageLink:'https://www.malishop.cl/'
+  }
+]
