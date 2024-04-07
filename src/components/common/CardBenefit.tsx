@@ -1,7 +1,14 @@
 import React, { useState } from 'react'
 import toast, {Toaster} from 'react-hot-toast';
 
-const CardBenefit = ({image, brandName, discountCode, brandPageLink}:{image:string, brandName:string, discountCode:string, brandPageLink:string}) => {
+interface CardProps {
+  image:string,
+  brandName:string,
+  discountCode:string,
+  brandPageLink:string
+}
+
+const CardBenefit = ({image, brandName, discountCode, brandPageLink}:CardProps) => {
 
 
   const handleClipboard = () => {
@@ -27,7 +34,7 @@ const CardBenefit = ({image, brandName, discountCode, brandPageLink}:{image:stri
 
 
   return (
-    <div className='max-w-[400px] h-[230px] relative'>
+    <div className='max-w-[400px] min-w-[320px] h-[230px] relative'>
       <Toaster position='top-center'/>
       <img src={image} alt={brandName} className='object-cover w-full h-full'/>
       <section className='flex flex-col absolute bottom-0 bg-[#00000060] backdrop-blur-lg text-white w-full pl-[20px] pr-[25px] pt-[10px] pb-[12px]'>
